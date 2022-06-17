@@ -1,5 +1,5 @@
 {
-	"name": "next-tailwind-trpc-prisma-planetscale-example",
+	"name": "stash",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
@@ -8,7 +8,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"db:connect": "pscale connect NAME BRANCH --port 3309",
+		"db:connect": "pscale connect stash dev --port 3309",
 		"db:push": "npx prisma db push",
 		"studio": "npx prisma studio",
 		"format": "npx prettier --write .",
