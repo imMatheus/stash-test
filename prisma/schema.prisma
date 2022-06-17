@@ -11,3 +11,32 @@ generator client {
     provider        = "prisma-client-js"
     previewFeatures = ["referentialIntegrity"]
 }
+
+model User {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    updatedAt DateTime @default(now()) @updatedAt
+    name      String
+    stashes   Stash[]
+}
+
+model Stash {
+    id        String    @id @default(cuid())
+    createdAt DateTime  @default(now())
+    updatedAt DateTime  @default(now()) @updatedAt
+    name      String
+    ownerId   String
+    owner     User      @relation(fields: [ownerId], references: [id])
+    Product   Product[]
+}
+
+model Product {
+    id          String   @id @default(cuid())
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @default(now()) @updatedAt
+    name        String
+    price       Float
+    description String
+    stashId     String
+    stash       Stash    @relation(fields: [stashId], references: [id])
+}
