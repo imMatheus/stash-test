@@ -10,6 +10,7 @@ const SignUp: NextPage = () => {
 	return (
 		<div>
 			<h2 className="text-center text-5xl font-bold">Welcome to Stash</h2>
+			<p>{JSON.stringify(session)}</p>
 			<Button onClick={() => signIn('github')}>Sign in</Button>
 		</div>
 	)

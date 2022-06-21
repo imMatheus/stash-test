@@ -7,7 +7,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<SessionProvider session={pageProps.session}>
 			<Layout>
-				<Component {...pageProps} />
+				<div className="px-4">
+					<div className="container mx-auto">
+						<Component {...pageProps} />
+					</div>
+				</div>
 			</Layout>
 		</SessionProvider>
 	)

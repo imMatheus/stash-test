@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
+import { useSession, signOut } from 'next-auth/react'
 
 const Navbar: React.FC = ({}) => {
+	const { data: session } = useSession()
+
 	return (
 		<nav className="py-2 px-4">
 			<div className="container mx-auto flex items-center justify-between">
@@ -20,6 +23,12 @@ const Navbar: React.FC = ({}) => {
 							Sign Up
 						</a>
 					</Link>
+					<div
+						className="cursor-pointer rounded px-2 py-0.5 transition-colors hover:bg-gray-100"
+						onClick={() => signOut()}
+					>
+						Logout
+					</div>
 				</div>
 			</div>
 		</nav>

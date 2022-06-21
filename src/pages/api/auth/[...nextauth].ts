@@ -15,8 +15,6 @@ export default NextAuth({
 	],
 	callbacks: {
 		session: async ({ session, user }) => {
-			console.log('made it here ', user, session)
-
 			session.userId = user.id as string
 			return Promise.resolve(session)
 		}
