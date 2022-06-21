@@ -4,7 +4,7 @@ import Button from '@/components/button'
 
 const Stashes: NextPage = () => {
 	return (
-		<div className="py-2 px-2">
+		<div className="py-2">
 			<div className="container mx-auto">
 				<h2 className="text-xl font-bold">Your stashes</h2>
 				<div className="flex gap-2">
