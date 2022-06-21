@@ -10,6 +10,7 @@
 		"lint": "next lint",
 		"db:connect": "pscale connect stash dev --port 3309",
 		"db:push": "npx prisma db push",
+		"db:generate": "prisma generate",
 		"studio": "npx prisma studio",
 		"format": "npx prettier --write .",
 		"format-check": "npx prettier --check ."

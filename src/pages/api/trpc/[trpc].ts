@@ -1,7 +1,7 @@
-import { appRouter, AppRouter } from '@/server/router'
-import { inferProcedureOutput } from '@trpc/server'
 import * as trpcNext from '@trpc/server/adapters/next'
+import { appRouter, AppRouter } from '@/server/router'
 import { createAuthenticatedTrpcContext } from '@/server/utils/context'
+import { inferProcedureOutput } from '@trpc/server'
 
 // export API handler
 export default trpcNext.createNextApiHandler({
